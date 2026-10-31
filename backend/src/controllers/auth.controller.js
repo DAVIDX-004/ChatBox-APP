@@ -1,4 +1,4 @@
-import User from "../models/User.js";
+﻿import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import { generateToken } from "../lib/utils.js";
 
@@ -33,20 +33,15 @@ export const signup = async (req, res) => {
 
     if (newUser) {
       const savedUser = await newUser.save();
-      generateToken(newUser._id, res);
+      generateToken(savedUser._id, res);
 
       res.status(201).json({
-        _id: newUser._id,
-        fullName: newUser.fullName,
-        email: newUser.email,
-        profilePic: newUser.profilePic,
+        _id: savedUser._id,
+        fullName: savedUser.fullName,
+        email: savedUser.email,
+        profilePic: savedUser.profilePic,
       });
-    } 
-
-    
-    
-    
-    else {
+    } else {
       res.status(400).json({ message: "Invalid user data" });
     }
   } catch (error) {
@@ -55,10 +50,10 @@ export const signup = async (req, res) => {
   }
 };
 
-export const login = async (req, res) => {
+export const login = (req, res) => {
   res.send("Login endpoint");
 };
 
-export const logout = async (req, res) => {
+export const logout = (req, res) => {
   res.send("Logout endpoint");
 };
