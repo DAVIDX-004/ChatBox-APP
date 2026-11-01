@@ -19,3 +19,6 @@ export const generateToken = (userId, res) => {
 
   return token;
 };
+
+
+// testing live by real users

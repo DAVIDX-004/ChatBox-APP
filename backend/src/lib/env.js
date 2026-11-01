@@ -18,3 +18,9 @@ export const ENV = {
   CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
   CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
 };
+
+
+//setting Render account
+
+
+//render is giving errors let me fix it
