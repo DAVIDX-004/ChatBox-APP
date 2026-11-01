@@ -1,0 +1,5 @@
+# 💬 ChatBox
+
+Welcome to ChatBox! This is a full-stack, real-time messaging application I built using the **MERN stack** (MongoDB, Express, React, Node.js). My main goal was to create a chat experience that feels truly instant, so I integrated **Socket.io** to ensure that messages and online user statuses update the exact second they happen without needing to refresh the page. Whether you are just dropping a quick text or sharing an image, the interface is designed to be fast, responsive, and feel just like the messaging apps we use every day.
+
+Under the hood, there is a lot working together to keep the app secure and running smoothly. It handles its own custom **JWT authentication**, seamlessly manages image uploads through **Cloudinary**, and even shoots out automated welcome emails via **Resend** whenever a new user creates an account. To protect the backend from spam or abuse, I also wired up **Arcjet** for API rate-limiting. It was definitely a wild ride getting all these different technologies to play nicely together, but I'm incredibly proud of the final result!
